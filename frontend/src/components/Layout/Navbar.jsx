@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { GiHamburgerMenu } from "react-icons/gi";
+import backend_URL from "./config"
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:4000/api/v1/user/logout",
+        backend_URL +"user/logout",
         {
           withCredentials: true,
         }

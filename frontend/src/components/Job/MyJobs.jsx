@@ -5,6 +5,7 @@ import { FaCheck } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
 import { Context } from "../../main";
 import { useNavigate } from "react-router-dom";
+import { backend_URL } from "../../config";
 
 const MyJobs = () => {
   const [myJobs, setMyJobs] = useState([]);
@@ -17,7 +18,7 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/job/getmyjobs",
+          backend_URL+"job/getmyjobs",
           { withCredentials: true }
         );
         setMyJobs(data.myJobs);
