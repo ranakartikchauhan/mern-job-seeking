@@ -16,7 +16,7 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: ['https://mern-job-seeking.onrender.com'],
+    origin: ['https://mern-job-seeking.onrender.com/'],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
