@@ -1,5 +1,3 @@
-Sure, here's a sample README.md file for your MERN-based job-seeking platform:
-
 ---
 
 # Job Seeker Platform
